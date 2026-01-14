@@ -1,5 +1,5 @@
 import { m } from 'framer-motion';
-import { MapPin, Clock, Check, Wifi, Leaf, Coffee } from 'lucide-react';
+import { MapPin, Clock, Check, Wifi, Leaf, Coffee, Briefcase, Sparkles, UtensilsCrossed } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Branch, useBranchSelection } from '../context/BranchContext';
 
@@ -18,6 +18,14 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
   const getVibeIcon = (vibe: string) => {
     if (vibe.includes('Wifi') || vibe.includes('Coworking')) return Wifi;
     if (vibe.includes('Organic') || vibe.includes('Pet') || vibe.includes('Garden')) return Leaf;
+    return Coffee;
+  };
+
+  const getFacilityIcon = (facility: string) => {
+    const lowerFacility = facility.toLowerCase();
+    if (lowerFacility.includes('working') || lowerFacility.includes('coworking')) return Briefcase;
+    if (lowerFacility.includes('musholla') || lowerFacility.includes('prayer')) return Sparkles;
+    if (lowerFacility.includes('eatery') || lowerFacility.includes('restaurant')) return UtensilsCrossed;
     return Coffee;
   };
 
@@ -43,11 +51,17 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
       <div className="h-40 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 relative overflow-hidden">
         <div className="absolute inset-0 botanical-pattern opacity-50" />
         <div className="absolute bottom-4 left-4 flex items-center gap-2">
-          <div className={`px-3 py-1 rounded-full text-xs font-medium border ${
-            open ? 'status-open' : 'status-closed'
-          }`}>
-            {open ? 'Buka Sekarang' : 'Tutup'}
-          </div>
+          {branch.isOpen24Hours ? (
+            <div className="px-3 py-1 rounded-full text-xs font-medium border bg-accent/90 border-accent text-accent-foreground backdrop-blur-sm">
+              Buka 24 Jam
+            </div>
+          ) : (
+            <div className={`px-3 py-1 rounded-full text-xs font-medium border ${
+              open ? 'status-open' : 'status-closed'
+            }`}>
+              {open ? 'Buka Sekarang' : 'Tutup'}
+            </div>
+          )}
         </div>
         {isSelected && (
           <m.div
@@ -71,14 +85,44 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
           <span>{branch.address}</span>
         </div>
 
-        <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
-          <Clock className="w-4 h-4 flex-shrink-0" />
-          <span>{branch.hours.open} - {branch.hours.close}</span>
-        </div>
+        {/* Operating Hours */}
+        {branch.isOpen24Hours ? (
+          <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+            <Clock className="w-4 h-4 flex-shrink-0" />
+            <span className="font-medium text-accent">Buka 24 Jam</span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+            <Clock className="w-4 h-4 flex-shrink-0" />
+            <span>{branch.hours.open} - {branch.hours.close}</span>
+          </div>
+        )}
+
+        {/* Kitchen Hours */}
+        {branch.kitchenHours && (
+          <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+            <UtensilsCrossed className="w-4 h-4 flex-shrink-0" />
+            <span>Kitchen: {branch.kitchenHours.open} - {branch.kitchenHours.close}</span>
+          </div>
+        )}
+
+        {/* Facilities */}
+        {branch.facilities && branch.facilities.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-3">
+            {branch.facilities.map((facility, i) => {
+              const Icon = getFacilityIcon(facility);
+              return (
+                <span key={i} className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-accent/10 text-accent text-xs font-medium border border-accent/20">
+                  <Icon className="w-3.5 h-3.5" />
+                  {facility}
+                </span>
+              );
+            })}
+          </div>
+        )}
 
         {/* Vibes */}
-        <div className="flex flex-wrap gap-2 mb-5">
-          {branch.vibes.map((vibe, i) => {
+        <div className="flex flex-wrap gap-2 mb-5">{branch.vibes.map((vibe, i) => {
             const Icon = getVibeIcon(vibe);
             return (
               <span key={i} className="vibe-tag flex items-center gap-1">

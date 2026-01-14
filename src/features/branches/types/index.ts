@@ -3,6 +3,9 @@ export interface Branch {
   name: string;
   address: string;
   hours: { open: string; close: string };
+  kitchenHours?: { open: string; close: string };
+  isOpen24Hours?: boolean;
+  facilities?: string[];
   vibes: string[];
   image: string;
   coordinates: { lat: number; lng: number };

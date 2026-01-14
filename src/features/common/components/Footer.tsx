@@ -60,7 +60,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2026 Tropic Coffee. Hak cipta dilindungi.
+            © 2026 Tropic Coffee. Hak cipta dilindungi. <br />Made with ☕️ by @ihza_baker.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Kebijakan Privasi</a>

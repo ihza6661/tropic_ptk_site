@@ -57,7 +57,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm mb-8"
           >
             <Leaf className="w-4 h-4" />
-            <span>4 Cabang Lokal • Suasana Botanikal</span>
+            <span>24 Jam • 4 Cabang Lokal • Suasana Botanikal</span>
           </m.div>
 
           {/* Headline */}
