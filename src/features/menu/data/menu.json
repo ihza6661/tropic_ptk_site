@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "signature",
+      "name": "Latte Khas",
+      "description": "Kreasi spesial kami yang terinspirasi tropis",
+      "items": [
+        {
+          "id": "coconut-cold-brew",
+          "name": "Coconut Cold Brew",
+          "description": "Cold brew halus dengan infusi santan creamy dan sentuhan vanila",
+          "price": 5.50,
+          "image": "/menu/coconut-cold-brew.jpg",
+          "tags": ["terlaris", "dingin"],
+          "calories": 120
+        },
+        {
+          "id": "pandan-latte",
+          "name": "Pandan Latte",
+          "description": "Espresso beraroma pandan dengan oat milk dan gula aren",
+          "price": 6.00,
+          "image": "/menu/pandan-latte.jpg",
+          "tags": ["baru", "vegan"],
+          "calories": 150
+        },
+        {
+          "id": "mango-matcha",
+          "name": "Mango Matcha Fusion",
+          "description": "Matcha ceremonial grade dicampur dengan puree mangga segar",
+          "price": 6.50,
+          "image": "/menu/mango-matcha.jpg",
+          "tags": ["musiman"],
+          "calories": 180
+        },
+        {
+          "id": "passionfruit-espresso",
+          "name": "Passionfruit Espresso Tonic",
+          "description": "Espresso bold bertemu passionfruit asam di atas tonic bersoda",
+          "price": 5.75,
+          "image": "/menu/passionfruit-tonic.jpg",
+          "tags": ["dingin", "segar"],
+          "calories": 90
+        }
+      ]
+    },
+    {
+      "id": "classics",
+      "name": "Klasik",
+      "description": "Favorit sepanjang masa, disempurnakan",
+      "items": [
+        {
+          "id": "house-espresso",
+          "name": "House Espresso",
+          "description": "Campuran khas kami dengan notes cokelat dan citrus",
+          "price": 3.50,
+          "image": "/menu/espresso.jpg",
+          "tags": [],
+          "calories": 5
+        },
+        {
+          "id": "cortado",
+          "name": "Cortado",
+          "description": "Espresso dan steamed milk yang lembut dalam porsi seimbang",
+          "price": 4.00,
+          "image": "/menu/cortado.jpg",
+          "tags": [],
+          "calories": 60
+        },
+        {
+          "id": "flat-white",
+          "name": "Flat White",
+          "description": "Microfoam halus di atas double ristretto",
+          "price": 4.50,
+          "image": "/menu/flat-white.jpg",
+          "tags": ["terlaris"],
+          "calories": 120
+        },
+        {
+          "id": "americano",
+          "name": "Americano",
+          "description": "Espresso bold yang dicairkan dengan air panas",
+          "price": 3.75,
+          "image": "/menu/americano.jpg",
+          "tags": [],
+          "calories": 10
+        },
+        {
+          "id": "cappuccino",
+          "name": "Cappuccino",
+          "description": "Gaya klasik Italia dengan foam tebal dan ringan",
+          "price": 4.25,
+          "image": "/menu/cappuccino.jpg",
+          "tags": [],
+          "calories": 100
+        }
+      ]
+    },
+    {
+      "id": "bites",
+      "name": "Makanan Ringan Tropis",
+      "description": "Sajian istimewa buatan tangan untuk melengkapi kopi Anda",
+      "items": [
+        {
+          "id": "banana-bread",
+          "name": "Toasted Banana Bread",
+          "description": "Roti pisang karamel dengan taburan macadamia",
+          "price": 4.50,
+          "image": "/menu/banana-bread.jpg",
+          "tags": ["vegan"],
+          "calories": 280
+        },
+        {
+          "id": "coconut-muffin",
+          "name": "Coconut Lime Muffin",
+          "description": "Muffin kelapa lembut dengan glaze jeruk nipis segar",
+          "price": 3.75,
+          "image": "/menu/coconut-muffin.jpg",
+          "tags": ["baru"],
+          "calories": 320
+        },
+        {
+          "id": "acai-bowl",
+          "name": "Açaí Power Bowl",
+          "description": "Açaí beku dengan topping granola, kelapa, dan buah segar",
+          "price": 9.50,
+          "image": "/menu/acai-bowl.jpg",
+          "tags": ["sehat", "vegan"],
+          "calories": 420
+        },
+        {
+          "id": "avocado-toast",
+          "name": "Tropical Avocado Toast",
+          "description": "Alpukat tumbuk dengan chili flakes, jeruk nipis, dan biji panggang di atas sourdough",
+          "price": 8.00,
+          "image": "/menu/avocado-toast.jpg",
+          "tags": ["vegan"],
+          "calories": 350
+        }
+      ]
+    }
+  ]
+}

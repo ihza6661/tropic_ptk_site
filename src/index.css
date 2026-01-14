@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --background: 40 10% 96%; /* Soft Sand */
+    --foreground: 160 89% 16%; /* Deep Emerald text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 89% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 89% 16%;
+
+    /* Emerald Green Primary */
+    --primary: 160 89% 16%;
+    --primary-foreground: 40 10% 96%;
+
+    /* Sand Secondary */
+    --secondary: 40 10% 92%;
+    --secondary-foreground: 160 89% 16%;
+
+    /* Muted Sand */
+    --muted: 40 10% 90%;
+    --muted-foreground: 160 30% 35%;
+
+    /* Tropical Orange Accent */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 20% 85%;
+    --input: 160 20% 85%;
+    --ring: 160 89% 16%;
+
+    --radius: 1rem;
+
+    /* Custom Tropic tokens */
+    --emerald: 160 89% 16%;
+    --emerald-light: 158 64% 32%;
+    --emerald-dark: 162 95% 10%;
+    --sand: 40 10% 96%;
+    --sand-dark: 40 10% 90%;
+    --tropical-orange: 25 95% 53%;
+    --tropical-orange-light: 25 95% 60%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(160 89% 16% / 0.95), hsl(162 95% 10% / 0.9));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.9), hsl(0 0% 100% / 0.7));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 45%));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(160 89% 16% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(160 89% 16% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(160 89% 16% / 0.16);
+    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
+
+    /* Typography */
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    /* Sidebar defaults */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 162 95% 6%;
+    --foreground: 40 10% 96%;
+
+    --card: 160 50% 10%;
+    --card-foreground: 40 10% 96%;
+
+    --popover: 160 50% 10%;
+    --popover-foreground: 40 10% 96%;
+
+    --primary: 40 10% 96%;
+    --primary-foreground: 160 89% 16%;
+
+    --secondary: 160 30% 15%;
+    --secondary-foreground: 40 10% 96%;
+
+    --muted: 160 30% 15%;
+    --muted-foreground: 40 10% 70%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 30% 20%;
+    --input: 160 30% 20%;
+    --ring: 40 10% 96%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/50;
+    box-shadow: var(--shadow-md);
+  }
+
+  .glass-card-strong {
+    @apply bg-white/90 backdrop-blur-lg border border-white/60;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .btn-tropical {
+    @apply relative overflow-hidden transition-all duration-300;
+    background: var(--gradient-accent);
+  }
+
+  .btn-tropical:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .status-open {
+    @apply bg-emerald-500/20 text-emerald-700 border-emerald-500/30;
+  }
+
+  .status-closed {
+    @apply bg-red-500/20 text-red-700 border-red-500/30;
+  }
+
+  .vibe-tag {
+    @apply px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .shadow-tropic {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-tropic-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .botanical-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C20 15 15 25 20 35S35 50 30 55' stroke='%23064E3B' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+  }
+}
+
+/* Leaflet custom styles */
+.leaflet-container {
+  font-family: var(--font-sans);
+  border-radius: 1.5rem;
+}
+
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.leaflet-control-zoom a {
+  background: white !important;
+  color: hsl(var(--primary)) !important;
+  border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: hsl(var(--muted)) !important;
+}
+
+.leaflet-control-attribution {
+  background: hsl(var(--background) / 0.8) !important;
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem 0 0 0;
+  font-size: 10px;
+  padding: 2px 6px;
+}

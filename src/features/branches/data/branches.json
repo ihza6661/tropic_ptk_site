@@ -1,0 +1,38 @@
+[
+  {
+    "id": "merdeka",
+    "name": "Tropic di Merdeka",
+    "address": "Jl. Hos Cokroaminoto No.326, Darat Sekip, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78117",
+    "hours": { "open": "07:00", "close": "22:00" },
+    "vibes": ["#TempatDudukLuar", "#WiFiCepat", "#CoworkingFriendly"],
+    "image": "/branches/north.jpg",
+    "coordinates": { "lat": -0.0289948, "lng": 109.3342987 }
+  },
+  {
+    "id": "taslim",
+    "name": "Tropic di Taslim",
+    "address": "Jl. Taslim No.1, Tengah, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78243",
+    "hours": { "open": "07:00", "close": "21:00" },
+    "vibes": ["#ZonaTenang", "#SuasanaAsri", "#TempatNgopi"],
+    "image": "/branches/downtown.jpg",
+    "coordinates": { "lat": -0.0227324, "lng": 109.33452 }
+  },
+  {
+    "id": "suprapto",
+    "name": "Tropic di Suprapto",
+    "address": "Jl. Aris Margono No.11, Benua Melayu Darat, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113",
+    "hours": { "open": "07:00", "close": "22:00" },
+    "vibes": ["#MalamHingga", "#RamaiBisnis", "#ParkingLuas"],
+    "image": "/branches/seaside.jpg",
+    "coordinates": { "lat": -0.0424607, "lng": 109.3416693 }
+  },
+  {
+    "id": "kobar",
+    "name": "Tropic di Kobar",
+    "address": "Jl. Prof. M.Yamin, Kota Baru, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78121",
+    "hours": { "open": "07:30", "close": "21:30" },
+    "vibes": ["#RamahKeluarga", "#TempatSantai", "#MenuLengkap"],
+    "image": "/branches/garden.jpg",
+    "coordinates": { "lat": -0.061497, "lng": 109.3058585 }
+  }
+]
