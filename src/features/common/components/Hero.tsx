@@ -107,21 +107,21 @@ export function Hero() {
               Cari Cabang
             </Button>
           </m.div>
-        </m.div>
 
-        {/* Scroll Indicator */}
-        <m.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
+          {/* Scroll Indicator */}
           <m.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center p-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            className="flex justify-center mt-16 md:mt-20"
           >
-            <m.div className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60" />
+            <m.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center p-2"
+            >
+              <m.div className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60" />
+            </m.div>
           </m.div>
         </m.div>
       </div>
