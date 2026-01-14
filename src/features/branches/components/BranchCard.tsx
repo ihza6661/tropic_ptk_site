@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { MapPin, Clock, Check, Wifi, Leaf, Coffee } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Branch, useBranchSelection } from '../context/BranchContext';
@@ -28,7 +28,7 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
   };
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -50,13 +50,13 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
           </div>
         </div>
         {isSelected && (
-          <motion.div
+          <m.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             className="absolute top-4 right-4 w-8 h-8 rounded-full bg-accent flex items-center justify-center"
           >
             <Check className="w-4 h-4 text-accent-foreground" />
-          </motion.div>
+          </m.div>
         )}
       </div>
 
@@ -112,6 +112,6 @@ export function BranchCard({ branch, index, onCardClick, isFocused }: BranchCard
           )}
         </Button>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

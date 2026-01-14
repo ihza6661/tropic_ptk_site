@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Leaf, Coffee, Heart, Globe } from 'lucide-react';
 
 const values = [
@@ -35,7 +35,7 @@ export function About() {
       <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -48,11 +48,11 @@ export function About() {
             Lahir dari kecintaan pada kopi berkualitas dan suasana tropis, Tropic menghadirkan
             kehangatan kehidupan pulau ke dalam cangkir harian Anda.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
-            <motion.div
+            <m.div
               key={value.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function About() {
               </div>
               <h3 className="font-serif text-xl font-semibold mb-2">{value.title}</h3>
               <p className="text-primary-foreground/70">{value.description}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

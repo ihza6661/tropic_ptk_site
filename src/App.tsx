@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BranchProvider } from "@/features/branches/context/BranchContext";
 import { CartProvider } from "@/features/cart/context/CartContext";
 import { ErrorBoundary } from "@/features/common/components/ErrorBoundary";
+import { MotionProvider } from "@/shared/components/MotionProvider";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -22,19 +23,21 @@ const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <BranchProvider>
-          <CartProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </CartProvider>
-        </BranchProvider>
+        <MotionProvider>
+          <BranchProvider>
+            <CartProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </CartProvider>
+          </BranchProvider>
+        </MotionProvider>
       </TooltipProvider>
     </QueryClientProvider>
   </ErrorBoundary>

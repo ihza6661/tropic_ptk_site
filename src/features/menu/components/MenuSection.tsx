@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Coffee, Search, X, Loader2, AlertCircle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -39,7 +39,7 @@ export function MenuSection() {
     <section id="menu" className="py-24">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +55,7 @@ export function MenuSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Dari latte khas terinspirasi tropis hingga klasik abadi dan makanan ringan buatan tangan.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Loading State */}
         {isLoading && (
@@ -80,7 +80,7 @@ export function MenuSection() {
         {!isLoading && !isError && (
           <>
             {/* Search & Filters */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -130,12 +130,12 @@ export function MenuSection() {
                   </Button>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Menu Categories */}
             <div className="space-y-16">
               {filteredCategories.map((category, catIndex) => (
-                <motion.div
+                <m.div
                   key={category.id}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -154,7 +154,7 @@ export function MenuSection() {
                       <MenuItem key={item.id} item={item} index={index} />
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               ))}
 
               {filteredCategories.length === 0 && (

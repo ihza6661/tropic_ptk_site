@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Plus, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/features/cart/context/CartContext';
@@ -50,7 +50,7 @@ export function MenuItem({ item, index }: MenuItemProps) {
   };
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
@@ -76,7 +76,7 @@ export function MenuItem({ item, index }: MenuItemProps) {
         </div>
 
         {/* Quick Add Button - appears on hover */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileHover={{ scale: 1.05 }}
           className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -89,7 +89,7 @@ export function MenuItem({ item, index }: MenuItemProps) {
             <Plus className="w-4 h-4 mr-1" />
             Add
           </Button>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Content */}
@@ -124,6 +124,6 @@ export function MenuItem({ item, index }: MenuItemProps) {
           </Button>
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { ShoppingBag, Minus, Plus, X, MapPin, ChevronDown } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
@@ -68,7 +68,7 @@ export function CartSheet() {
         <div className="flex-1 overflow-y-auto py-4">
           <AnimatePresence mode="popLayout">
             {items.length === 0 ? (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="flex flex-col items-center justify-center h-full text-center py-12"
@@ -80,11 +80,11 @@ export function CartSheet() {
                 <p className="text-sm text-muted-foreground">
                   Tambahkan item lezat dari menu kami!
                 </p>
-              </motion.div>
+              </m.div>
             ) : (
               <div className="space-y-4">
                 {items.map(item => (
-                  <motion.div
+                  <m.div
                     key={item.id}
                     layout
                     initial={{ opacity: 0, x: 20 }}
@@ -133,7 +133,7 @@ export function CartSheet() {
                     >
                       <X className="w-4 h-4" />
                     </Button>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
             )}

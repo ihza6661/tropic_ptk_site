@@ -1,19 +1,29 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect, lazy, Suspense } from 'react';
+import { m, AnimatePresence } from 'framer-motion';
 import { MapPin, Map, LayoutGrid, Loader2, AlertCircle } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
 import { useBranchSelection } from '../context/BranchContext';
 import { useBranches } from '../queries/useBranches';
 import { Branch } from '../types';
 import { BranchCard } from './BranchCard';
-import { BranchMap } from './BranchMap';
+import { BranchMapSkeleton } from './BranchMapSkeleton';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+
+// Lazy load the heavy BranchMap component (includes Leaflet)
+const BranchMap = lazy(() => import('./BranchMap').then(module => ({ default: module.BranchMap })));
 
 export function BranchHub() {
   const { data: branches = [], isLoading, isError, error } = useBranches();
   const { selectedBranch, setSelectedBranch } = useBranchSelection();
   const [focusedBranch, setFocusedBranch] = useState<Branch | null>(null);
   const [showMapOnMobile, setShowMapOnMobile] = useState(false);
+  
+  // Intersection observer to trigger map loading when section is visible
+  const { ref: mapTriggerRef, inView: mapShouldLoad } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
 
   // Load saved branch from localStorage once data is loaded
   useEffect(() => {
@@ -38,7 +48,7 @@ export function BranchHub() {
     <section id="branches" className="py-24 bg-secondary/50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +65,7 @@ export function BranchHub() {
             Pilih cabang Tropic lokal Anda untuk pemesanan lebih cepat dan suasana yang personal. 
             Setiap lokasi memiliki atmosfer unik tersendiri.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Loading State */}
         {isLoading && (
@@ -121,39 +131,52 @@ export function BranchHub() {
               </div>
 
               {/* Map - 2 columns */}
-              <motion.div 
+              <m.div 
+                ref={mapTriggerRef}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="lg:col-span-2 h-[600px] sticky top-24"
               >
-                <BranchMap 
-                  branches={branches}
-                  focusedBranch={focusedBranch}
-                  onMarkerClick={handleMarkerClick}
-                />
-              </motion.div>
+                {mapShouldLoad ? (
+                  <Suspense fallback={<BranchMapSkeleton />}>
+                    <BranchMap 
+                      branches={branches}
+                      focusedBranch={focusedBranch}
+                      onMarkerClick={handleMarkerClick}
+                    />
+                  </Suspense>
+                ) : (
+                  <BranchMapSkeleton />
+                )}
+              </m.div>
             </div>
 
             {/* Mobile Layout: Toggle between Cards and Map */}
             <div className="lg:hidden">
               <AnimatePresence mode="wait">
                 {showMapOnMobile ? (
-                  <motion.div
+                  <m.div
                     key="map"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     className="h-[400px] md:h-[500px]"
                   >
-                    <BranchMap 
-                      branches={branches}
-                      focusedBranch={focusedBranch}
-                      onMarkerClick={handleMarkerClick}
-                    />
-                  </motion.div>
+                    {mapShouldLoad ? (
+                      <Suspense fallback={<BranchMapSkeleton />}>
+                        <BranchMap 
+                          branches={branches}
+                          focusedBranch={focusedBranch}
+                          onMarkerClick={handleMarkerClick}
+                        />
+                      </Suspense>
+                    ) : (
+                      <BranchMapSkeleton />
+                    )}
+                  </m.div>
                 ) : (
-                  <motion.div
+                  <m.div
                     key="cards"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -169,7 +192,7 @@ export function BranchHub() {
                         isFocused={focusedBranch?.id === branch.id}
                       />
                     ))}
-                  </motion.div>
+                  </m.div>
                 )}
               </AnimatePresence>
             </div>

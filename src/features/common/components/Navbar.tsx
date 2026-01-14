@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Coffee, ShoppingBag, MapPin, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useBranchSelection } from '@/features/branches/context/BranchContext';
@@ -24,7 +24,7 @@ export function Navbar() {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <motion.a 
+            <m.a 
               href="#"
               className="flex items-center gap-2 group"
               whileHover={{ scale: 1.02 }}
@@ -33,7 +33,7 @@ export function Navbar() {
                 <Coffee className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-serif text-2xl font-semibold text-primary">Tropic</span>
-            </motion.a>
+            </m.a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
@@ -61,14 +61,14 @@ export function Navbar() {
             <div className="flex items-center gap-3">
               {/* Branch Indicator */}
               {selectedBranch && (
-                <motion.div 
+                <m.div 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium"
                 >
                   <MapPin className="w-3.5 h-3.5" />
                   <span className="truncate max-w-[120px]">{selectedBranch.name.replace('Tropic ', '')}</span>
-                </motion.div>
+                </m.div>
               )}
 
               {/* Cart Button */}
@@ -80,13 +80,13 @@ export function Navbar() {
               >
                 <ShoppingBag className="w-5 h-5" />
                 {totalItems > 0 && (
-                  <motion.span 
+                  <m.span 
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-accent-foreground text-xs flex items-center justify-center font-medium"
                   >
                     {totalItems}
-                  </motion.span>
+                  </m.span>
                 )}
               </Button>
 
@@ -107,7 +107,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -139,7 +139,7 @@ export function Navbar() {
                 </div>
               )}
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>
