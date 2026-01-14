@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { formatCurrency } from '@/shared/lib/currency';
 
 export function CartSheet() {
   const { 
@@ -99,7 +100,7 @@ export function CartSheet() {
                     <div className="flex-1 min-w-0">
                       <h4 className="font-medium text-foreground truncate">{item.name}</h4>
                       <p className="text-sm text-accent font-semibold">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        {formatCurrency(item.price * item.quantity)}
                       </p>
                     </div>
 
@@ -147,15 +148,15 @@ export function CartSheet() {
             <div className="space-y-2">
               <div className="flex justify-between text-sm text-muted-foreground">
                 <span>Subtotal</span>
-                <span>${totalPrice.toFixed(2)}</span>
+                <span>{formatCurrency(totalPrice)}</span>
               </div>
               <div className="flex justify-between text-sm text-muted-foreground">
                 <span>Pajak (8%)</span>
-                <span>${(totalPrice * 0.08).toFixed(2)}</span>
+                <span>{formatCurrency(totalPrice * 0.08)}</span>
               </div>
               <div className="flex justify-between text-lg font-semibold text-foreground pt-2 border-t border-border">
                 <span>Total</span>
-                <span className="text-accent">${(totalPrice * 1.08).toFixed(2)}</span>
+                <span className="text-accent">{formatCurrency(totalPrice * 1.08)}</span>
               </div>
             </div>
 

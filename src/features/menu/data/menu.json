@@ -9,7 +9,7 @@
           "id": "coconut-cold-brew",
           "name": "Coconut Cold Brew",
           "description": "Cold brew halus dengan infusi santan creamy dan sentuhan vanila",
-          "price": 5.50,
+          "price": 82500,
           "image": "/menu/coconut-cold-brew.jpg",
           "tags": ["terlaris", "dingin"],
           "calories": 120
@@ -18,7 +18,7 @@
           "id": "pandan-latte",
           "name": "Pandan Latte",
           "description": "Espresso beraroma pandan dengan oat milk dan gula aren",
-          "price": 6.00,
+          "price": 90000,
           "image": "/menu/pandan-latte.jpg",
           "tags": ["baru", "vegan"],
           "calories": 150
@@ -27,7 +27,7 @@
           "id": "mango-matcha",
           "name": "Mango Matcha Fusion",
           "description": "Matcha ceremonial grade dicampur dengan puree mangga segar",
-          "price": 6.50,
+          "price": 97500,
           "image": "/menu/mango-matcha.jpg",
           "tags": ["musiman"],
           "calories": 180
@@ -36,7 +36,7 @@
           "id": "passionfruit-espresso",
           "name": "Passionfruit Espresso Tonic",
           "description": "Espresso bold bertemu passionfruit asam di atas tonic bersoda",
-          "price": 5.75,
+          "price": 86250,
           "image": "/menu/passionfruit-tonic.jpg",
           "tags": ["dingin", "segar"],
           "calories": 90
@@ -52,7 +52,7 @@
           "id": "house-espresso",
           "name": "House Espresso",
           "description": "Campuran khas kami dengan notes cokelat dan citrus",
-          "price": 3.50,
+          "price": 52500,
           "image": "/menu/espresso.jpg",
           "tags": [],
           "calories": 5
@@ -61,7 +61,7 @@
           "id": "cortado",
           "name": "Cortado",
           "description": "Espresso dan steamed milk yang lembut dalam porsi seimbang",
-          "price": 4.00,
+          "price": 60000,
           "image": "/menu/cortado.jpg",
           "tags": [],
           "calories": 60
@@ -70,7 +70,7 @@
           "id": "flat-white",
           "name": "Flat White",
           "description": "Microfoam halus di atas double ristretto",
-          "price": 4.50,
+          "price": 67500,
           "image": "/menu/flat-white.jpg",
           "tags": ["terlaris"],
           "calories": 120
@@ -79,7 +79,7 @@
           "id": "americano",
           "name": "Americano",
           "description": "Espresso bold yang dicairkan dengan air panas",
-          "price": 3.75,
+          "price": 56250,
           "image": "/menu/americano.jpg",
           "tags": [],
           "calories": 10
@@ -88,7 +88,7 @@
           "id": "cappuccino",
           "name": "Cappuccino",
           "description": "Gaya klasik Italia dengan foam tebal dan ringan",
-          "price": 4.25,
+          "price": 63750,
           "image": "/menu/cappuccino.jpg",
           "tags": [],
           "calories": 100
@@ -104,7 +104,7 @@
           "id": "banana-bread",
           "name": "Toasted Banana Bread",
           "description": "Roti pisang karamel dengan taburan macadamia",
-          "price": 4.50,
+          "price": 67500,
           "image": "/menu/banana-bread.jpg",
           "tags": ["vegan"],
           "calories": 280
@@ -113,7 +113,7 @@
           "id": "coconut-muffin",
           "name": "Coconut Lime Muffin",
           "description": "Muffin kelapa lembut dengan glaze jeruk nipis segar",
-          "price": 3.75,
+          "price": 56250,
           "image": "/menu/coconut-muffin.jpg",
           "tags": ["baru"],
           "calories": 320
@@ -122,7 +122,7 @@
           "id": "acai-bowl",
           "name": "Açaí Power Bowl",
           "description": "Açaí beku dengan topping granola, kelapa, dan buah segar",
-          "price": 9.50,
+          "price": 142500,
           "image": "/menu/acai-bowl.jpg",
           "tags": ["sehat", "vegan"],
           "calories": 420
@@ -131,7 +131,7 @@
           "id": "avocado-toast",
           "name": "Tropical Avocado Toast",
           "description": "Alpukat tumbuk dengan chili flakes, jeruk nipis, dan biji panggang di atas sourdough",
-          "price": 8.00,
+          "price": 120000,
           "image": "/menu/avocado-toast.jpg",
           "tags": ["vegan"],
           "calories": 350

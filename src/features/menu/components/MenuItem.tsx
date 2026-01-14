@@ -2,6 +2,7 @@ import { m } from 'framer-motion';
 import { Plus, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/features/cart/context/CartContext';
+import { formatCurrency } from '@/shared/lib/currency';
 
 interface MenuItemProps {
   item: {
@@ -99,7 +100,7 @@ export function MenuItem({ item, index }: MenuItemProps) {
             {item.name}
           </h3>
           <span className="text-lg font-semibold text-accent whitespace-nowrap ml-3">
-            ${item.price.toFixed(2)}
+            {formatCurrency(item.price)}
           </span>
         </div>
         
