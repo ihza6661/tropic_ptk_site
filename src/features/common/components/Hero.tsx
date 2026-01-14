@@ -57,7 +57,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm mb-8"
           >
             <Leaf className="w-4 h-4" />
-            <span>Sumber Berkelanjutan • Panggang Lokal</span>
+            <span>4 Cabang Lokal • Suasana Botanikal</span>
           </m.div>
 
           {/* Headline */}
@@ -67,9 +67,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-6 leading-tight drop-shadow-lg"
           >
-            Dipanggang Segar,
-            <br />
-            <span className="text-tropical-orange drop-shadow-md">Terinspirasi</span> Tropis.
+            Find Your <span className="text-tropical-orange drop-shadow-md">Coffee</span> Oasis.
           </m.h1>
 
           {/* Subtext */}
@@ -79,7 +77,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto drop-shadow"
           >
-            Temukan oasis terdekat Anda di antara 4 cabang lokal kami.
+            Kopi lokal berkualitas, suasana hijau yang santai dan tenang. Tropic hadir di 4 cabang.
           </m.p>
 
           {/* CTAs */}
@@ -91,20 +89,20 @@ export function Hero() {
           >
             <Button 
               size="lg"
-              onClick={() => scrollToSection('menu')}
+              onClick={() => scrollToSection('branches')}
               className="btn-tropical text-accent-foreground px-8 py-6 text-lg rounded-2xl"
             >
-              <Coffee className="w-5 h-5 mr-2" />
-              Lihat Menu
+              <MapPin className="w-5 h-5 mr-2" />
+              Cari Cabang
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('branches')}
+              onClick={() => scrollToSection('menu')}
               className="bg-white/15 backdrop-blur-md border-white/40 text-white hover:bg-white/25 px-8 py-6 text-lg rounded-2xl"
             >
-              <MapPin className="w-5 h-5 mr-2" />
-              Cari Cabang
+              <Coffee className="w-5 h-5 mr-2" />
+              Lihat Menu
             </Button>
           </m.div>
 
