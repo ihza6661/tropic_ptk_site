@@ -12,9 +12,8 @@ const About = lazy(() => import('@/features/common/components/About').then(modul
 const Footer = lazy(() => import('@/features/common/components/Footer').then(module => ({ default: module.Footer })));
 
 const Index = () => {
-  // Intersection observers for lazy loading
-  const { ref: menuRef, inView: menuInView } = useInView({ threshold: 0.1, triggerOnce: true });
-  const { ref: branchRef, inView: branchInView } = useInView({ threshold: 0.1, triggerOnce: true });
+  // Only lazy load non-critical sections (About and Footer)
+  // Menu and Branches are loaded immediately to ensure CTA buttons work reliably
   const { ref: aboutRef, inView: aboutInView } = useInView({ threshold: 0.1, triggerOnce: true });
   const { ref: footerRef, inView: footerInView } = useInView({ threshold: 0.1, triggerOnce: true });
 
@@ -23,29 +22,17 @@ const Index = () => {
       <Navbar />
       <Hero />
       
-      {/* Menu Section with lazy loading */}
-      <div ref={menuRef}>
-        {menuInView ? (
-          <Suspense fallback={<MenuSectionSkeleton />}>
-            <MenuSection />
-          </Suspense>
-        ) : (
-          <MenuSectionSkeleton />
-        )}
-      </div>
+      {/* Menu Section - Always loaded for CTA button reliability */}
+      <Suspense fallback={<MenuSectionSkeleton />}>
+        <MenuSection />
+      </Suspense>
       
-      {/* Branch Hub with lazy loading */}
-      <div ref={branchRef}>
-        {branchInView ? (
-          <Suspense fallback={<div className="h-96" />}>
-            <BranchHub />
-          </Suspense>
-        ) : (
-          <div className="h-96" />
-        )}
-      </div>
+      {/* Branch Hub - Always loaded for CTA button reliability */}
+      <Suspense fallback={<div className="h-96" />}>
+        <BranchHub />
+      </Suspense>
       
-      {/* About Section with lazy loading */}
+      {/* About Section - Still lazy loaded */}
       <div ref={aboutRef}>
         {aboutInView ? (
           <Suspense fallback={<div className="h-64" />}>

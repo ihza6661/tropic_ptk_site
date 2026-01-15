@@ -112,6 +112,44 @@ export async function scrollToSection(
 }
 
 /**
+ * Enhanced scroll function that handles intersection-observer-based lazy loading
+ * First scrolls to the wrapper div to trigger the intersection observer,
+ * then waits for the actual section to mount before scrolling to it
+ * 
+ * @param id - The element ID to scroll to (e.g., "branches")
+ * @param triggerWrapperId - Optional ID of the wrapper div that has the intersection observer ref
+ * @returns Promise that resolves when scroll completes or fails
+ */
+export async function scrollToSectionWithTrigger(
+  id: string,
+  triggerWrapperId?: string
+): Promise<boolean> {
+  // First check if element already exists (section already loaded)
+  let element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    return true;
+  }
+
+  // Element doesn't exist yet - need to trigger lazy loading
+  const wrapperId = triggerWrapperId || `${id}-wrapper`;
+  const triggerElement = document.getElementById(wrapperId);
+  
+  if (triggerElement) {
+    // Calculate absolute position and jump directly to avoid triggering intermediate sections
+    // This prevents intersection observers along the scroll path from firing
+    const targetPosition = triggerElement.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: targetPosition, behavior: 'auto' });
+    
+    // Give React a moment to detect intersection and start rendering
+    await new Promise(resolve => setTimeout(resolve, 150));
+  }
+
+  // Now wait for the actual section to appear and scroll to it smoothly
+  return scrollToSection(id, { behavior: 'smooth', timeout: 2000 });
+}
+
+/**
  * Synchronous version for backward compatibility
  * Falls back to basic scroll without retry logic
  * @param id - The element ID to scroll to
