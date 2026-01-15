@@ -197,6 +197,74 @@
   .botanical-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C20 15 15 25 20 35S35 50 30 55' stroke='%23064E3B' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
   }
+
+  /* Custom Tropical Scrollbar */
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--sand-dark));
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--emerald));
+    border-radius: 10px;
+    border: 2px solid hsl(var(--sand-dark));
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--emerald-light));
+    box-shadow: 0 0 20px hsl(var(--tropical-orange) / 0.4),
+                0 0 40px hsl(var(--tropical-orange) / 0.2);
+    transform: scale(1.05);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: hsl(var(--emerald-dark));
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--emerald)) hsl(var(--sand-dark));
+  }
+
+  /* Mobile responsive - thinner scrollbar */
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  /* Dark mode scrollbar */
+  .dark ::-webkit-scrollbar-track {
+    background: hsl(var(--emerald-dark));
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: hsl(var(--emerald-light));
+    border-color: hsl(var(--emerald-dark));
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--sand));
+    box-shadow: 0 0 20px hsl(var(--tropical-orange) / 0.5),
+                0 0 40px hsl(var(--tropical-orange) / 0.3);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:active {
+    background: hsl(var(--sand-dark));
+  }
+
+  .dark {
+    scrollbar-color: hsl(var(--emerald-light)) hsl(var(--emerald-dark));
+  }
 }
 
 /* Leaflet custom styles */
