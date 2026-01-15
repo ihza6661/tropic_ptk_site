@@ -39,4 +39,36 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Individual Branch: Tropic di Merdeka -->
+  <url>
+    <loc>https://tropic.pnk.ihza.me/#branch-merdeka</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Branch: Tropic di Taslim -->
+  <url>
+    <loc>https://tropic.pnk.ihza.me/#branch-taslim</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Branch: Tropic di Suprapto -->
+  <url>
+    <loc>https://tropic.pnk.ihza.me/#branch-suprapto</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Branch: Tropic di Kobar -->
+  <url>
+    <loc>https://tropic.pnk.ihza.me/#branch-kobar</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -1,0 +1,333 @@
+{
+  "branches": [
+    {
+      "id": "merdeka",
+      "businessName": "Tropic di Merdeka",
+      "category": {
+        "primary": "Coffee Shop",
+        "additional": ["Cafe", "Restaurant", "Internet Cafe", "Coworking Space"]
+      },
+      "address": {
+        "street": "Jl. Hos Cokroaminoto No.326",
+        "area": "Darat Sekip",
+        "district": "Kec. Pontianak Kota",
+        "city": "Kota Pontianak",
+        "province": "Kalimantan Barat",
+        "postalCode": "78117",
+        "country": "Indonesia",
+        "fullAddress": "Jl. Hos Cokroaminoto No.326, Darat Sekip, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78117"
+      },
+      "coordinates": {
+        "latitude": "-0.0289948",
+        "longitude": "109.3342987",
+        "googleMapsLink": "https://www.google.com/maps?q=-0.0289948,109.3342987"
+      },
+      "contact": {
+        "phone": "+62 812-3456-7890",
+        "website": "https://tropic.pnk.ihza.me/#branch-merdeka",
+        "socialMedia": {
+          "instagram": "https://www.instagram.com/tropic.pnk/"
+        }
+      },
+      "hours": {
+        "type": "Open 24 Hours",
+        "schedule": {
+          "monday": "Open 24 hours",
+          "tuesday": "Open 24 hours",
+          "wednesday": "Open 24 hours",
+          "thursday": "Open 24 hours",
+          "friday": "Open 24 hours",
+          "saturday": "Open 24 hours",
+          "sunday": "Open 24 hours"
+        },
+        "kitchenHours": {
+          "daily": "08:00 - 22:00",
+          "note": "Kitchen untuk menu berat tersedia 08:00-22:00. Cafe tetap buka 24 jam untuk kopi & snack."
+        }
+      },
+      "description": {
+        "short": "Coffee shop buka 24 jam dengan WiFi cepat, working space, dan musholla di Cokroaminoto, Pontianak.",
+        "long": "Tropic di Merdeka adalah coffee shop buka 24 jam di Jl. Hos Cokroaminoto, Pontianak.\n\nKami menyediakan:\n☕ Kopi premium & menu lengkap (Kitchen: 08:00-22:00)\n💻 Working space dengan WiFi cepat\n🕌 Musholla bersih & nyaman\n🪑 Tempat duduk outdoor\n🏢 Suasana coworking-friendly\n\nBuka 24 jam, 7 hari seminggu. Cocok untuk nugas, meeting, atau santai dengan kopi.\n\nFasilitas: Cafe • Eatery • Working Space • Musholla • WiFi Gratis • Parkir Luas\n\nCabang Tropic Coffee lainnya: Taslim, Suprapto, Kobar\n\nInstagram: @tropic.pnk\nWebsite: tropic.pnk.ihza.me"
+      },
+      "facilities": ["Cafe", "Eatery", "Working Space", "Musholla"],
+      "amenities": [
+        "Free WiFi",
+        "Power outlets",
+        "Outdoor seating",
+        "Wheelchair accessible",
+        "Parking available",
+        "Prayer room (Musholla)",
+        "Good for working on laptop",
+        "Coworking-friendly"
+      ],
+      "vibes": ["#TempatDudukLuar", "#WiFiCepat", "#CoworkingFriendly"],
+      "attributes": {
+        "wifi": "Free",
+        "accessibility": "Wheelchair accessible entrance",
+        "planning": "Accepts credit cards, QRIS",
+        "payments": ["Cash", "Debit Card", "Credit Card", "QRIS"],
+        "offerings": ["Coffee", "Food", "Outdoor seating"],
+        "atmosphere": ["Casual", "Cozy", "Good for working"],
+        "serviceOptions": ["Dine-in", "Takeout"]
+      },
+      "priceRange": "$$",
+      "cuisine": ["Coffee", "Indonesian", "International"]
+    },
+    {
+      "id": "taslim",
+      "businessName": "Tropic di Taslim",
+      "category": {
+        "primary": "Coffee Shop",
+        "additional": ["Cafe", "Restaurant", "Internet Cafe", "Coworking Space"]
+      },
+      "address": {
+        "street": "Jl. Taslim No.1",
+        "area": "Tengah",
+        "district": "Kec. Pontianak Kota",
+        "city": "Kota Pontianak",
+        "province": "Kalimantan Barat",
+        "postalCode": "78243",
+        "country": "Indonesia",
+        "fullAddress": "Jl. Taslim No.1, Tengah, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78243"
+      },
+      "coordinates": {
+        "latitude": "-0.0227324",
+        "longitude": "109.33452",
+        "googleMapsLink": "https://www.google.com/maps?q=-0.0227324,109.33452"
+      },
+      "contact": {
+        "phone": "+62 812-3456-7890",
+        "website": "https://tropic.pnk.ihza.me/#branch-taslim",
+        "socialMedia": {
+          "instagram": "https://www.instagram.com/tropic.pnk/"
+        }
+      },
+      "hours": {
+        "type": "Open 24 Hours",
+        "schedule": {
+          "monday": "Open 24 hours",
+          "tuesday": "Open 24 hours",
+          "wednesday": "Open 24 hours",
+          "thursday": "Open 24 hours",
+          "friday": "Open 24 hours",
+          "saturday": "Open 24 hours",
+          "sunday": "Open 24 hours"
+        },
+        "kitchenHours": {
+          "daily": "08:00 - 22:00",
+          "note": "Kitchen untuk menu berat tersedia 08:00-22:00. Cafe tetap buka 24 jam untuk kopi & snack."
+        }
+      },
+      "description": {
+        "short": "Coffee shop buka 24 jam dengan zona tenang dan suasana asri di Taslim, Pontianak.",
+        "long": "Tropic di Taslim adalah coffee shop buka 24 jam di Jl. Taslim, Pontianak.\n\nKami menyediakan:\n☕ Kopi premium & menu lengkap (Kitchen: 08:00-22:00)\n💻 Working space dengan WiFi\n🕌 Musholla bersih & nyaman\n🌿 Suasana asri dan zona tenang\n😌 Tempat ngopi yang nyaman\n\nBuka 24 jam, 7 hari seminggu. Cocok untuk yang mencari ketenangan sambil menikmati kopi.\n\nFasilitas: Cafe • Eatery • Working Space • Musholla • WiFi Gratis\n\nCabang Tropic Coffee lainnya: Merdeka, Suprapto, Kobar\n\nInstagram: @tropic.pnk\nWebsite: tropic.pnk.ihza.me"
+      },
+      "facilities": ["Cafe", "Eatery", "Working Space", "Musholla"],
+      "amenities": [
+        "Free WiFi",
+        "Power outlets",
+        "Quiet zone",
+        "Wheelchair accessible",
+        "Parking available",
+        "Prayer room (Musholla)",
+        "Good for working on laptop",
+        "Green atmosphere"
+      ],
+      "vibes": ["#ZonaTenang", "#SuasanaAsri", "#TempatNgopi"],
+      "attributes": {
+        "wifi": "Free",
+        "accessibility": "Wheelchair accessible entrance",
+        "planning": "Accepts credit cards, QRIS",
+        "payments": ["Cash", "Debit Card", "Credit Card", "QRIS"],
+        "offerings": ["Coffee", "Food"],
+        "atmosphere": ["Casual", "Cozy", "Quiet", "Peaceful"],
+        "serviceOptions": ["Dine-in", "Takeout"]
+      },
+      "priceRange": "$$",
+      "cuisine": ["Coffee", "Indonesian", "International"]
+    },
+    {
+      "id": "suprapto",
+      "businessName": "Tropic di Suprapto",
+      "category": {
+        "primary": "Coffee Shop",
+        "additional": ["Cafe", "Restaurant", "Internet Cafe", "Coworking Space"]
+      },
+      "address": {
+        "street": "Jl. Aris Margono No.11",
+        "area": "Benua Melayu Darat",
+        "district": "Kec. Pontianak Sel.",
+        "city": "Kota Pontianak",
+        "province": "Kalimantan Barat",
+        "postalCode": "78113",
+        "country": "Indonesia",
+        "fullAddress": "Jl. Aris Margono No.11, Benua Melayu Darat, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113"
+      },
+      "coordinates": {
+        "latitude": "-0.0424607",
+        "longitude": "109.3416693",
+        "googleMapsLink": "https://www.google.com/maps?q=-0.0424607,109.3416693"
+      },
+      "contact": {
+        "phone": "+62 812-3456-7890",
+        "website": "https://tropic.pnk.ihza.me/#branch-suprapto",
+        "socialMedia": {
+          "instagram": "https://www.instagram.com/tropic.pnk/"
+        }
+      },
+      "hours": {
+        "type": "Open 24 Hours",
+        "schedule": {
+          "monday": "Open 24 hours",
+          "tuesday": "Open 24 hours",
+          "wednesday": "Open 24 hours",
+          "thursday": "Open 24 hours",
+          "friday": "Open 24 hours",
+          "saturday": "Open 24 hours",
+          "sunday": "Open 24 hours"
+        },
+        "kitchenHours": {
+          "daily": "08:00 - 22:00",
+          "note": "Kitchen untuk menu berat tersedia 08:00-22:00. Cafe tetap buka 24 jam untuk kopi & snack."
+        }
+      },
+      "description": {
+        "short": "Coffee shop buka 24 jam dengan area bisnis ramai dan parkir luas di Aris Margono (Suprapto), Pontianak.",
+        "long": "Tropic di Suprapto adalah coffee shop buka 24 jam di Jl. Aris Margono, Pontianak.\n\nKami menyediakan:\n☕ Kopi premium & menu lengkap (Kitchen: 08:00-22:00)\n💻 Working space dengan WiFi\n🕌 Musholla bersih & nyaman\n🚗 Parkir luas\n🏢 Lokasi strategis di area bisnis\n\nBuka 24 jam, 7 hari seminggu. Malam hingga pagi tetap buka! Cocok untuk meeting bisnis atau begadang sambil ngopi.\n\nFasilitas: Cafe • Eatery • Working Space • Musholla • WiFi Gratis • Parkir Luas\n\nCabang Tropic Coffee lainnya: Merdeka, Taslim, Kobar\n\nInstagram: @tropic.pnk\nWebsite: tropic.pnk.ihza.me"
+      },
+      "facilities": ["Cafe", "Eatery", "Working Space", "Musholla"],
+      "amenities": [
+        "Free WiFi",
+        "Power outlets",
+        "Large parking area",
+        "Wheelchair accessible",
+        "Prayer room (Musholla)",
+        "Good for working on laptop",
+        "Business area location",
+        "Open late night"
+      ],
+      "vibes": ["#MalamHingga", "#RamaiBisnis", "#ParkingLuas"],
+      "attributes": {
+        "wifi": "Free",
+        "accessibility": "Wheelchair accessible entrance",
+        "planning": "Accepts credit cards, QRIS",
+        "payments": ["Cash", "Debit Card", "Credit Card", "QRIS"],
+        "offerings": ["Coffee", "Food", "Late-night food"],
+        "atmosphere": ["Casual", "Business-friendly"],
+        "serviceOptions": ["Dine-in", "Takeout"],
+        "parking": "Large parking lot"
+      },
+      "priceRange": "$$",
+      "cuisine": ["Coffee", "Indonesian", "International"]
+    },
+    {
+      "id": "kobar",
+      "businessName": "Tropic di Kobar",
+      "category": {
+        "primary": "Coffee Shop",
+        "additional": ["Cafe", "Restaurant", "Internet Cafe", "Coworking Space"]
+      },
+      "address": {
+        "street": "Jl. Prof. M.Yamin",
+        "area": "Kota Baru",
+        "district": "Kec. Pontianak Sel.",
+        "city": "Kota Pontianak",
+        "province": "Kalimantan Barat",
+        "postalCode": "78121",
+        "country": "Indonesia",
+        "fullAddress": "Jl. Prof. M.Yamin, Kota Baru, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78121"
+      },
+      "coordinates": {
+        "latitude": "-0.061497",
+        "longitude": "109.3058585",
+        "googleMapsLink": "https://www.google.com/maps?q=-0.061497,109.3058585"
+      },
+      "contact": {
+        "phone": "+62 812-3456-7890",
+        "website": "https://tropic.pnk.ihza.me/#branch-kobar",
+        "socialMedia": {
+          "instagram": "https://www.instagram.com/tropic.pnk/"
+        }
+      },
+      "hours": {
+        "type": "Open 24 Hours",
+        "schedule": {
+          "monday": "Open 24 hours",
+          "tuesday": "Open 24 hours",
+          "wednesday": "Open 24 hours",
+          "thursday": "Open 24 hours",
+          "friday": "Open 24 hours",
+          "saturday": "Open 24 hours",
+          "sunday": "Open 24 hours"
+        },
+        "kitchenHours": {
+          "daily": "08:00 - 22:00",
+          "note": "Kitchen untuk menu berat tersedia 08:00-22:00. Cafe tetap buka 24 jam untuk kopi & snack."
+        }
+      },
+      "description": {
+        "short": "Coffee shop buka 24 jam ramah keluarga dengan menu lengkap di M.Yamin (Kobar), Pontianak.",
+        "long": "Tropic di Kobar adalah coffee shop buka 24 jam di Jl. Prof. M.Yamin, Pontianak.\n\nKami menyediakan:\n☕ Kopi premium & menu lengkap (Kitchen: 08:00-22:00)\n💻 Working space dengan WiFi\n🕌 Musholla bersih & nyaman\n👨‍👩‍👧‍👦 Suasana ramah keluarga\n🍽️ Menu makanan lengkap\n\nBuka 24 jam, 7 hari seminggu. Tempat santai yang cocok untuk keluarga, kumpul teman, atau ngopi sambil nugas.\n\nFasilitas: Cafe • Eatery • Working Space • Musholla • WiFi Gratis\n\nCabang Tropic Coffee lainnya: Merdeka, Taslim, Suprapto\n\nInstagram: @tropic.pnk\nWebsite: tropic.pnk.ihza.me"
+      },
+      "facilities": ["Cafe", "Eatery", "Working Space", "Musholla"],
+      "amenities": [
+        "Free WiFi",
+        "Power outlets",
+        "Family-friendly",
+        "Wheelchair accessible",
+        "Parking available",
+        "Prayer room (Musholla)",
+        "Good for working on laptop",
+        "Complete menu",
+        "Relaxed atmosphere"
+      ],
+      "vibes": ["#RamahKeluarga", "#TempatSantai", "#MenuLengkap"],
+      "attributes": {
+        "wifi": "Free",
+        "accessibility": "Wheelchair accessible entrance",
+        "planning": "Accepts credit cards, QRIS",
+        "payments": ["Cash", "Debit Card", "Credit Card", "QRIS"],
+        "offerings": ["Coffee", "Food", "Family-friendly"],
+        "atmosphere": ["Casual", "Cozy", "Family-friendly", "Relaxed"],
+        "serviceOptions": ["Dine-in", "Takeout"],
+        "crowd": "Good for groups"
+      },
+      "priceRange": "$$",
+      "cuisine": ["Coffee", "Indonesian", "International"]
+    }
+  ],
+  "organizationInfo": {
+    "brandName": "Tropic Coffee",
+    "totalBranches": 4,
+    "headquarters": "Pontianak, Kalimantan Barat",
+    "founded": null,
+    "website": "https://tropic.pnk.ihza.me",
+    "socialMedia": {
+      "instagram": "@tropic.pnk",
+      "instagramUrl": "https://www.instagram.com/tropic.pnk/"
+    },
+    "description": "Tropic Coffee adalah coffee shop lokal Pontianak dengan 4 cabang yang buka 24 jam. Kami menyediakan kopi premium, menu lengkap, working space dengan WiFi cepat, dan fasilitas musholla di setiap cabang.",
+    "values": [
+      "Buka 24 jam untuk kenyamanan maksimal",
+      "Fasilitas lengkap: Cafe, Eatery, Working Space, Musholla",
+      "WiFi cepat & power outlets untuk produktivitas",
+      "Suasana nyaman untuk berbagai kebutuhan",
+      "Lokasi strategis di 4 area Pontianak"
+    ]
+  },
+  "seoKeywords": [
+    "coffee shop pontianak",
+    "kopi 24 jam pontianak",
+    "tempat nugas pontianak",
+    "working space pontianak",
+    "cafe buka 24 jam",
+    "musholla cafe pontianak",
+    "wifi cepat pontianak",
+    "coworking pontianak",
+    "tempat ngopi pontianak",
+    "coffee shop cokroaminoto",
+    "cafe taslim",
+    "coffee shop suprapto",
+    "cafe kobar"
+  ]
+}
