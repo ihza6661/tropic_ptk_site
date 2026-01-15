@@ -12,9 +12,8 @@ const About = lazy(() => import('@/features/common/components/About').then(modul
 const Footer = lazy(() => import('@/features/common/components/Footer').then(module => ({ default: module.Footer })));
 
 const Index = () => {
-  // Only lazy load non-critical sections (About and Footer)
-  // Menu and Branches are loaded immediately to ensure CTA buttons work reliably
-  const { ref: aboutRef, inView: aboutInView } = useInView({ threshold: 0.1, triggerOnce: true });
+  // Only lazy load non-critical sections (Footer)
+  // Menu, Branches, and About are loaded immediately to ensure navigation and CTA buttons work reliably
   const { ref: footerRef, inView: footerInView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
@@ -32,16 +31,10 @@ const Index = () => {
         <BranchHub />
       </Suspense>
       
-      {/* About Section - Still lazy loaded */}
-      <div ref={aboutRef}>
-        {aboutInView ? (
-          <Suspense fallback={<div className="h-64" />}>
-            <About />
-          </Suspense>
-        ) : (
-          <div className="h-64" />
-        )}
-      </div>
+      {/* About Section - Always loaded for navigation reliability */}
+      <Suspense fallback={<div className="h-64" />}>
+        <About />
+      </Suspense>
       
       {/* Footer with lazy loading */}
       <div ref={footerRef}>
