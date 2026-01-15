@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://tropic.pnk.ihza.me/sitemap.xml
+Sitemap: https://tropic.ihza.me/sitemap.xml

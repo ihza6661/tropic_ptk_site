@@ -40,7 +40,7 @@ Before starting, gather:
 ### **For All Branches:**
 - [ ] Google account (ideally business email like info@tropiccoffee.id)
 - [ ] Phone number(s) - can use same number or unique per branch
-- [ ] Website: `https://tropic.pnk.ihza.me`
+- [ ] Website: `https://tropic.ihza.me`
 - [ ] Social media: Instagram `@tropic.pnk`
 - [ ] Logo file: `tropic_logo.webp`
 - [ ] Business description (see templates below)
@@ -123,7 +123,7 @@ Skip this or add if you offer delivery:
 
 **Website:**
 ```
-https://tropic.pnk.ihza.me
+https://tropic.ihza.me
 ```
 
 **Appointment URL:** Leave blank (or add if you take reservations)
@@ -172,7 +172,7 @@ Fasilitas: Cafe • Eatery • Working Space • Musholla • WiFi Gratis • Pa
 Cabang Tropic Coffee lainnya: Taslim, Suprapto, Kobar
 
 Instagram: @tropic.pnk
-Website: tropic.pnk.ihza.me
+Website: tropic.ihza.me
 ```
 
 **Character limit:** 750 characters

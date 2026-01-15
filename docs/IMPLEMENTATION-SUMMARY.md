@@ -2,7 +2,7 @@
 **Tropic Coffee - Pontianak**
 
 **Date:** January 15, 2026  
-**Domain:** https://tropic.pnk.ihza.me  
+**Domain:** https://tropic.ihza.me  
 **Focus:** Local Foot Traffic + Brand Awareness
 
 ---
@@ -52,14 +52,14 @@ All phases of the local SEO and brand awareness optimization have been successfu
 
 **After:**
 - **8 URLs** (added 4 branch-specific anchors)
-  - https://tropic.pnk.ihza.me/
-  - https://tropic.pnk.ihza.me/#menu
-  - https://tropic.pnk.ihza.me/#branches
-  - https://tropic.pnk.ihza.me/#about
-  - https://tropic.pnk.ihza.me/#branch-merdeka (NEW)
-  - https://tropic.pnk.ihza.me/#branch-taslim (NEW)
-  - https://tropic.pnk.ihza.me/#branch-suprapto (NEW)
-  - https://tropic.pnk.ihza.me/#branch-kobar (NEW)
+  - https://tropic.ihza.me/
+  - https://tropic.ihza.me/#menu
+  - https://tropic.ihza.me/#branches
+  - https://tropic.ihza.me/#about
+  - https://tropic.ihza.me/#branch-merdeka (NEW)
+  - https://tropic.ihza.me/#branch-taslim (NEW)
+  - https://tropic.ihza.me/#branch-suprapto (NEW)
+  - https://tropic.ihza.me/#branch-kobar (NEW)
 
 **Benefits:**
 - Better indexing of branch-specific content
@@ -206,23 +206,23 @@ coffee shop Cokroaminoto, cafe Taslim Pontianak, coffee shop Suprapto, cafe Koba
 
 1. **Deploy to Production**
    ```bash
-   # Push dist/ folder to tropic.pnk.ihza.me
+   # Push dist/ folder to tropic.ihza.me
    # Or deploy via your hosting platform
    ```
 
 2. **Submit Updated Sitemap to Google Search Console**
    - Visit: https://search.google.com/search-console
    - Go to: Sitemaps
-   - Re-submit: https://tropic.pnk.ihza.me/sitemap.xml
+   - Re-submit: https://tropic.ihza.me/sitemap.xml
    - Request re-indexing for homepage
 
 3. **Validate Structured Data**
    - Test at: https://search.google.com/test/rich-results
-   - Input: https://tropic.pnk.ihza.me
+   - Input: https://tropic.ihza.me
    - Expected: 4 CafeOrCoffeeShop + 1 Organization + 1 WebSite + 1 BreadcrumbList = 7 schemas
 
 4. **Test Deep Links**
-   - Visit: https://tropic.pnk.ihza.me/#branch-merdeka
+   - Visit: https://tropic.ihza.me/#branch-merdeka
    - Should scroll to Merdeka branch card
    - Test all 4 branch links
 
@@ -347,7 +347,7 @@ Before deployment, verify:
 - [x] Branch cards have ID attributes
 - [x] Meta descriptions updated
 - [x] Keywords expanded
-- [x] All URLs use correct domain (tropic.pnk.ihza.me)
+- [x] All URLs use correct domain (tropic.ihza.me)
 - [x] Instagram link correct (@tropic.pnk)
 - [x] Documentation files complete
 
@@ -410,6 +410,6 @@ After deployment, test:
 
 **Status:** ✅ READY FOR PRODUCTION DEPLOYMENT
 
-**Next Immediate Action:** Deploy to https://tropic.pnk.ihza.me and follow Week 1-2 tasks above.
+**Next Immediate Action:** Deploy to https://tropic.ihza.me and follow Week 1-2 tasks above.
 
 Good luck! 🚀☕
