@@ -4,6 +4,7 @@ import { Coffee, ShoppingBag, MapPin, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useBranchSelection } from '@/features/branches/context/BranchContext';
 import { useCart } from '@/features/cart/context/CartContext';
+import { scrollToSection as scrollToSectionUtil } from '@/shared/utils/scrollUtils';
 
 export function Navbar() {
   const { selectedBranch } = useBranchSelection();
@@ -11,10 +12,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSectionUtil(id);
     setIsMobileMenuOpen(false);
   };
 

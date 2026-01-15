@@ -1,15 +1,10 @@
 import { m } from 'framer-motion';
 import { Coffee, MapPin, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { scrollToSection } from '@/shared/utils/scrollUtils';
 import heroBg from '@/assets/hero-bg.jpg';
 
 export function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -42,7 +37,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-24 sm:pt-20 md:pt-0">
         <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-sm mb-8"
+            className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs sm:text-sm mb-8 whitespace-nowrap"
           >
             <Leaf className="w-4 h-4" />
             <span>24 Jam • 4 Cabang Lokal • Suasana Botanikal</span>
