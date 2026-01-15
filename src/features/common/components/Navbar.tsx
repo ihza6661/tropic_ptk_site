@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { Coffee, ShoppingBag, MapPin, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useBranchSelection } from '@/features/branches/context/BranchContext';
 import { useCart } from '@/features/cart/context/CartContext';
@@ -53,6 +54,12 @@ export function Navbar() {
               >
                 Tentang Kami
               </button>
+              <Link 
+                to="/pengembang"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                Pengembang
+              </Link>
             </div>
 
             {/* Right Side Actions */}
@@ -130,6 +137,13 @@ export function Navbar() {
               >
                 Tentang Kami
               </button>
+              <Link 
+                to="/pengembang"
+                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Pengembang
+              </Link>
               {selectedBranch && (
                 <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-accent/10 text-accent font-medium mt-2">
                   <MapPin className="w-4 h-4" />

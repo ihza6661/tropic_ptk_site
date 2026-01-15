@@ -8,6 +8,7 @@ import { CartProvider } from "@/features/cart/context/CartContext";
 import { ErrorBoundary } from "@/features/common/components/ErrorBoundary";
 import { MotionProvider } from "@/shared/components/MotionProvider";
 import Index from "./pages/Index";
+import Developer from "./pages/Developer";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient({
@@ -31,6 +32,7 @@ const App = () => (
               <BrowserRouter>
                 <Routes>
                   <Route path="/" element={<Index />} />
+                  <Route path="/pengembang" element={<Developer />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>

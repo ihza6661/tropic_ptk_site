@@ -1,4 +1,5 @@
 import { Coffee, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -25,6 +26,7 @@ export function Footer() {
               <li><a href="#menu" className="hover:text-primary transition-colors">Menu</a></li>
               <li><a href="#branches" className="hover:text-primary transition-colors">Cabang</a></li>
               <li><a href="#about" className="hover:text-primary transition-colors">Tentang Kami</a></li>
+              <li><Link to="/pengembang" className="hover:text-primary transition-colors">Pengembang</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Karir</a></li>
             </ul>
           </div>
