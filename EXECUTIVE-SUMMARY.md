@@ -122,7 +122,7 @@
 **Ihza Mahendra** - Local Developer, Pontianak
 - 🎓 STMIK Pontianak
 - 💼 3+ years web development experience
-- 🏆 Portfolio: R-Tech, Dua Insan Story
+- 🏆 Portfolio: Toko Komputer, Dua Insan Story
 - 📍 Local insight tentang market Pontianak
 - 🔧 Tech stack: React 18, TypeScript, Laravel (modern & scalable)
 
