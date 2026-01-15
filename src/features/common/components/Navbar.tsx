@@ -18,7 +18,7 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-[1100]">
       <div className="glass-card-strong mx-4 mt-4 rounded-2xl">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
