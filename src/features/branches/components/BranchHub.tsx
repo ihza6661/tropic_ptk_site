@@ -18,8 +18,9 @@ export function BranchHub() {
   const { selectedBranch, setSelectedBranch } = useBranchSelection();
   const [focusedBranch, setFocusedBranch] = useState<Branch | null>(null);
   const [showMapOnMobile, setShowMapOnMobile] = useState(false);
+  const [shouldLoadMapOnMobile, setShouldLoadMapOnMobile] = useState(false);
   
-  // Intersection observer to trigger map loading when section is visible
+  // Intersection observer to trigger map loading when section is visible (desktop)
   const { ref: mapTriggerRef, inView: mapShouldLoad } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -35,6 +36,13 @@ export function BranchHub() {
       }
     }
   }, [branches, selectedBranch, setSelectedBranch]);
+
+  // Trigger map loading when user switches to map view on mobile
+  useEffect(() => {
+    if (showMapOnMobile) {
+      setShouldLoadMapOnMobile(true);
+    }
+  }, [showMapOnMobile]);
 
   const handleCardClick = (branch: Branch) => {
     setFocusedBranch(branch);
@@ -162,7 +170,7 @@ export function BranchHub() {
                     exit={{ opacity: 0, x: -20 }}
                     className="h-[400px] md:h-[500px]"
                   >
-                    {mapShouldLoad ? (
+                    {(mapShouldLoad || shouldLoadMapOnMobile) ? (
                       <Suspense fallback={<BranchMapSkeleton />}>
                         <BranchMap 
                           branches={branches}
