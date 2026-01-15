@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { formatCurrency } from '@/shared/lib/currency';
+import { TAX_RATE, UI_LABELS } from '@/shared/lib/constants';
 
 export function CartSheet() {
   const { 
@@ -33,14 +34,14 @@ export function CartSheet() {
         <SheetHeader className="pb-4 border-b border-border">
           <SheetTitle className="flex items-center gap-2 font-serif text-2xl">
             <ShoppingBag className="w-6 h-6 text-accent" />
-            Pesanan Anda
+            {UI_LABELS.cart.yourOrder}
           </SheetTitle>
         </SheetHeader>
 
         {/* Pickup Location Selector */}
         <div className="py-4 border-b border-border">
           <label className="text-sm font-medium text-muted-foreground mb-2 block">
-            Lokasi Pengambilan
+            {UI_LABELS.cart.pickupLocation}
           </label>
           <Select 
             value={selectedBranch?.id || ''} 
@@ -52,7 +53,7 @@ export function CartSheet() {
             <SelectTrigger className="w-full rounded-xl bg-background">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent" />
-                <SelectValue placeholder="Pilih cabang" />
+                <SelectValue placeholder={UI_LABELS.cart.selectBranchPlaceholder} />
               </div>
             </SelectTrigger>
             <SelectContent>
@@ -77,9 +78,9 @@ export function CartSheet() {
                 <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mb-4">
                   <ShoppingBag className="w-8 h-8 text-muted-foreground" />
                 </div>
-                <p className="text-lg font-medium text-foreground mb-2">Keranjang Anda kosong</p>
+                <p className="text-lg font-medium text-foreground mb-2">{UI_LABELS.cart.emptyTitle}</p>
                 <p className="text-sm text-muted-foreground">
-                  Tambahkan item dari menu kami
+                  {UI_LABELS.cart.emptySubtitle}
                 </p>
               </m.div>
             ) : (
@@ -111,15 +112,17 @@ export function CartSheet() {
                         size="icon"
                         className="w-8 h-8 rounded-lg"
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        aria-label={`Kurangi jumlah ${item.name}`}
                       >
                         <Minus className="w-3 h-3" />
                       </Button>
-                      <span className="w-6 text-center font-medium">{item.quantity}</span>
+                      <span className="w-6 text-center font-medium" aria-hidden="true">{item.quantity}</span>
                       <Button
                         variant="outline"
                         size="icon"
                         className="w-8 h-8 rounded-lg"
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        aria-label={`Tambah jumlah ${item.name}`}
                       >
                         <Plus className="w-3 h-3" />
                       </Button>
@@ -131,6 +134,7 @@ export function CartSheet() {
                       size="icon"
                       className="w-8 h-8 text-muted-foreground hover:text-destructive"
                       onClick={() => removeItem(item.id)}
+                      aria-label={`Hapus ${item.name} dari keranjang`}
                     >
                       <X className="w-4 h-4" />
                     </Button>
@@ -147,16 +151,16 @@ export function CartSheet() {
             {/* Totals */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>Subtotal</span>
+                <span>{UI_LABELS.cart.subtotal}</span>
                 <span>{formatCurrency(totalPrice)}</span>
               </div>
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>Pajak (8%)</span>
-                <span>{formatCurrency(totalPrice * 0.08)}</span>
+                <span>{UI_LABELS.cart.tax} ({TAX_RATE * 100}%)</span>
+                <span>{formatCurrency(totalPrice * TAX_RATE)}</span>
               </div>
               <div className="flex justify-between text-lg font-semibold text-foreground pt-2 border-t border-border">
-                <span>Total</span>
-                <span className="text-accent">{formatCurrency(totalPrice * 1.08)}</span>
+                <span>{UI_LABELS.cart.total}</span>
+                <span className="text-accent">{formatCurrency(totalPrice * (1 + TAX_RATE))}</span>
               </div>
             </div>
 
@@ -165,7 +169,7 @@ export function CartSheet() {
               className="w-full btn-tropical text-accent-foreground py-6 rounded-2xl text-lg font-semibold"
               disabled={!selectedBranch}
             >
-              {selectedBranch ? `Checkout untuk Pengambilan di ${selectedBranch.name.replace('Tropic ', '')}` : 'Pilih Cabang untuk Melanjutkan'}
+              {selectedBranch ? `${UI_LABELS.cart.checkoutFor} ${selectedBranch.name.replace('Tropic ', '')}` : UI_LABELS.cart.selectBranch}
             </Button>
 
             {/* Clear Cart */}
@@ -174,7 +178,7 @@ export function CartSheet() {
               className="w-full text-muted-foreground"
               onClick={clearCart}
             >
-              Kosongkan Keranjang
+              {UI_LABELS.cart.clearCart}
             </Button>
           </div>
         )}

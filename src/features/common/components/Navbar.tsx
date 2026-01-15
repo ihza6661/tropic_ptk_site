@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useBranchSelection } from '@/features/branches/context/BranchContext';
 import { useCart } from '@/features/cart/context/CartContext';
 import { scrollToSection as scrollToSectionUtil } from '@/shared/utils/scrollUtils';
+import { UI_LABELS } from '@/shared/lib/constants';
 
 export function Navbar() {
   const { selectedBranch } = useBranchSelection();
@@ -27,6 +28,7 @@ export function Navbar() {
               href="#"
               className="flex items-center gap-2 group"
               whileHover={{ scale: 1.02 }}
+              aria-label="Tropic Bloom Beranda"
             >
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
                 <Coffee className="w-5 h-5 text-primary-foreground" />
@@ -36,29 +38,32 @@ export function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <button 
-                onClick={() => scrollToSection('menu')}
+              <a 
+                href="#menu"
+                onClick={(e) => { e.preventDefault(); scrollToSection('menu'); }}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Menu
-              </button>
-              <button 
-                onClick={() => scrollToSection('branches')}
+                {UI_LABELS.nav.menu}
+              </a>
+              <a 
+                href="#branches"
+                onClick={(e) => { e.preventDefault(); scrollToSection('branches'); }}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Cabang
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
+                {UI_LABELS.nav.branches}
+              </a>
+              <a 
+                href="#about"
+                onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Tentang Kami
-              </button>
+                {UI_LABELS.nav.about}
+              </a>
               <Link 
                 to="/pengembang"
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                Pengembang
+                {UI_LABELS.nav.developer}
               </Link>
             </div>
 
@@ -82,6 +87,7 @@ export function Navbar() {
                 size="icon"
                 className="relative"
                 onClick={() => setIsCartOpen(true)}
+                aria-label="Keranjang belanja"
               >
                 <ShoppingBag className="w-5 h-5" />
                 {totalItems > 0 && (
@@ -101,6 +107,9 @@ export function Navbar() {
                 size="icon"
                 className="md:hidden"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? "Tutup menu" : "Buka menu"}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
@@ -113,41 +122,45 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <m.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden glass-card-strong mx-4 mt-2 rounded-2xl overflow-hidden"
           >
             <div className="p-4 flex flex-col gap-2">
-              <button 
-                onClick={() => scrollToSection('menu')}
-                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium"
+              <a 
+                href="#menu"
+                onClick={(e) => { e.preventDefault(); scrollToSection('menu'); }}
+                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium block"
               >
-                Menu
-              </button>
-              <button 
-                onClick={() => scrollToSection('branches')}
-                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium"
+                {UI_LABELS.nav.menu}
+              </a>
+              <a 
+                href="#branches"
+                onClick={(e) => { e.preventDefault(); scrollToSection('branches'); }}
+                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium block"
               >
-                Cabang
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium"
+                {UI_LABELS.nav.branches}
+              </a>
+              <a 
+                href="#about"
+                onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
+                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium block"
               >
-                Tentang Kami
-              </button>
+                {UI_LABELS.nav.about}
+              </a>
               <Link 
                 to="/pengembang"
-                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium"
+                className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted transition-colors font-medium block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Pengembang
+                {UI_LABELS.nav.developer}
               </Link>
               {selectedBranch && (
                 <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-accent/10 text-accent font-medium mt-2">
                   <MapPin className="w-4 h-4" />
-                  <span>Memesan dari: {selectedBranch.name}</span>
+                  <span>{UI_LABELS.nav.orderingFrom}: {selectedBranch.name}</span>
                 </div>
               )}
             </div>
