@@ -6,6 +6,15 @@ import { Branch, useBranchSelection } from '../context/BranchContext';
 import { Button } from '@/components/ui/button';
 import 'leaflet/dist/leaflet.css';
 
+// Fix Leaflet icon paths for production builds
+// Since we use custom SVG icons, we don't need the default marker images
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: '',
+  iconUrl: '',
+  shadowUrl: '',
+});
+
 // Custom emerald green marker icon as SVG
 const createEmeraldIcon = (isSelected: boolean = false) => {
   const color = isSelected ? '#F97316' : '#064E3B'; // Tropical orange for selected, emerald for others
