@@ -1,5 +1,5 @@
 import { m, AnimatePresence } from 'framer-motion';
-import { ShoppingBag, Minus, Plus, X, MapPin, ChevronDown } from 'lucide-react';
+import { ShoppingBag, Minus, Plus, X, MapPin } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/features/cart/context/CartContext';
@@ -79,7 +79,7 @@ export function CartSheet() {
                 </div>
                 <p className="text-lg font-medium text-foreground mb-2">Keranjang Anda kosong</p>
                 <p className="text-sm text-muted-foreground">
-                  Tambahkan item lezat dari menu kami!
+                  Tambahkan item dari menu kami
                 </p>
               </m.div>
             ) : (

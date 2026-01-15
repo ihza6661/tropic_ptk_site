@@ -59,11 +59,10 @@ export function BranchHub() {
             <span>Cabang</span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
-            Temukan Oasis Anda
+            Pilih Cabang Anda
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pilih cabang Tropic lokal Anda untuk pemesanan lebih cepat dan suasana yang personal. 
-            Setiap lokasi memiliki atmosfer unik tersendiri.
+            Pilih cabang terdekat untuk pemesanan lebih cepat. Setiap lokasi memiliki karakter sendiri.
           </p>
         </m.div>
 

@@ -14,8 +14,7 @@ export function Footer() {
               <span className="font-serif text-2xl font-semibold text-primary">Tropic</span>
             </div>
             <p className="text-muted-foreground max-w-sm">
-              Kopi panggang segar dengan inspirasi tropis disajikan dengan penuh cinta
-              di 4 cabang lokal kami. Temukan oasis Anda hari ini.
+              Kopi panggang segar dengan inspirasi tropis. 4 cabang lokal siap melayani Anda.
             </p>
           </div>
 

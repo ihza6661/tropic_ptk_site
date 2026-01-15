@@ -52,7 +52,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs sm:text-sm mb-8 whitespace-nowrap"
           >
             <Leaf className="w-4 h-4" />
-            <span>24 Jam • 4 Cabang Lokal • Suasana Botanikal</span>
+            <span>24 Jam • 4 Cabang Lokal • Ruang Hijau</span>
           </m.div>
 
           {/* Headline */}
@@ -62,7 +62,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-6 leading-tight drop-shadow-lg"
           >
-            Find Your <span className="text-tropical-orange drop-shadow-md">Coffee</span> Oasis.
+            Kopi <span className="text-tropical-orange drop-shadow-md">Segar</span> Setiap Hari.
           </m.h1>
 
           {/* Subtext */}

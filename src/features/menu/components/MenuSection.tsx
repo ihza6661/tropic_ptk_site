@@ -50,10 +50,10 @@ export function MenuSection() {
             <span>Menu Kami</span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
-            Pengalaman Tropic
+            Menu Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dari latte khas terinspirasi tropis hingga klasik abadi dan makanan ringan buatan tangan.
+            Latte spesial, kopi klasik, dan makanan ringan.
           </p>
         </m.div>
 
@@ -61,7 +61,7 @@ export function MenuSection() {
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-20">
             <Loader2 className="w-12 h-12 animate-spin text-primary mb-4" />
-            <p className="text-lg text-muted-foreground">Memuat menu lezat kami...</p>
+            <p className="text-lg text-muted-foreground">Memuat menu...</p>
           </div>
         )}
 

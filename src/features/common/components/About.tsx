@@ -5,22 +5,22 @@ const values = [
   {
     icon: Leaf,
     title: 'Sumber Berkelanjutan',
-    description: 'Setiap biji kopi bersumber secara etis dari perkebunan kecil di seluruh kawasan tropis.'
+    description: 'Biji kopi dari perkebunan lokal dan etis.'
   },
   {
     icon: Coffee,
     title: 'Panggang Lokal',
-    description: 'Dipanggang segar setiap minggu di fasilitas lokal kami untuk memastikan cita rasa terbaik.'
+    description: 'Dipanggang segar setiap minggu di fasilitas lokal.'
   },
   {
     icon: Heart,
     title: 'Komunitas Utama',
-    description: 'Setiap cabang dirancang menjadi tempat berkumpul bagi lingkungan sekitar.'
+    description: 'Tempat berkumpul untuk komunitas lokal.'
   },
   {
     icon: Globe,
     title: 'Inspirasi Tropis',
-    description: 'Cita rasa unik yang terinspirasi dari destinasi tropis di seluruh dunia.'
+    description: 'Menu kopi dengan cita rasa tropis.'
   }
 ];
 
@@ -45,8 +45,7 @@ export function About() {
             Cerita Kami
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-            Lahir dari kecintaan pada kopi berkualitas dan suasana tropis, Tropic menghadirkan
-            kehangatan kehidupan pulau ke dalam cangkir harian Anda.
+            Tropic menyediakan kopi berkualitas dengan suasana tropis yang nyaman di 4 cabang lokal.
           </p>
         </m.div>
 
