@@ -20,7 +20,7 @@ export function Hero() {
 
       {/* Decorative Elements */}
       <m.div 
-        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent/20 blur-3xl"
+        className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent/20 blur-3xl animate-float-gentle"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3]
@@ -28,12 +28,20 @@ export function Hero() {
         transition={{ duration: 4, repeat: Infinity }}
       />
       <m.div 
-        className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-tropical-orange/20 blur-3xl"
+        className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-tropical-orange/20 blur-3xl animate-float-gentle-delayed"
         animate={{ 
           scale: [1, 1.3, 1],
           opacity: [0.2, 0.4, 0.2]
         }}
         transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+      />
+      <m.div 
+        className="absolute top-1/2 left-1/4 w-24 h-24 rounded-full bg-emerald-light/15 blur-2xl"
+        animate={{ 
+          scale: [1, 1.4, 1],
+          opacity: [0.2, 0.35, 0.2]
+        }}
+        transition={{ duration: 6, repeat: Infinity, delay: 2 }}
       />
 
       {/* Content */}
@@ -60,9 +68,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-6 leading-tight drop-shadow-lg"
+            className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-8 leading-tight drop-shadow-lg"
           >
-            Kopi <span className="text-tropical-orange drop-shadow-md">Segar</span> Setiap Hari.
+            Kopi <span className="text-tropical-orange drop-shadow-md relative inline-block glow-text-orange">Segar</span> Setiap Hari.
           </m.h1>
 
           {/* Subtext */}
@@ -85,7 +93,7 @@ export function Hero() {
             <Button 
               size="lg"
               onClick={() => scrollToSection('branches')}
-              className="btn-tropical text-accent-foreground px-8 py-6 text-lg rounded-2xl"
+              className="btn-tropical text-accent-foreground px-8 py-6 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
             >
               <MapPin className="w-5 h-5 mr-2" />
               Cari Cabang
@@ -94,7 +102,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('menu')}
-              className="bg-white/15 backdrop-blur-md border-white/40 text-white hover:bg-white/25 px-8 py-6 text-lg rounded-2xl"
+              className="bg-white/15 backdrop-blur-md border-white/40 text-white hover:bg-white/25 px-8 py-6 text-lg rounded-2xl hover:scale-105 transition-all duration-200"
             >
               <Coffee className="w-5 h-5 mr-2" />
               Lihat Menu
@@ -111,7 +119,7 @@ export function Hero() {
             <m.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center p-2"
+              className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center p-2 glow-box-white"
             >
               <m.div className="w-1.5 h-1.5 rounded-full bg-primary-foreground/60" />
             </m.div>

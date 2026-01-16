@@ -97,7 +97,7 @@ export function BranchHub() {
         {!isLoading && !isError && branches.length > 0 && (
           <>
             {/* Mobile View Toggle */}
-            <div className="lg:hidden flex justify-center mb-6">
+            <div className="lg:hidden flex justify-center mb-8">
               <div className="inline-flex rounded-2xl bg-card p-1 shadow-tropic">
                 <Button
                   variant="ghost"

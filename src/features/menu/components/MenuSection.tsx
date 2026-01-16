@@ -43,14 +43,17 @@ export function MenuSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 relative"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-accent/10 rounded-full blur-3xl -z-10 animate-float-gentle" />
+          
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4 border border-accent/20">
             <Coffee className="w-4 h-4" />
             <span>Menu Kami</span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
-            Menu Kami
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4 relative">
+            Menu <span className="text-gradient">Kami</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Latte spesial, kopi klasik, dan makanan ringan.
@@ -88,18 +91,18 @@ export function MenuSection() {
             >
               {/* Search Bar */}
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
                 <Input
                   type="text"
                   placeholder="Cari menu..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-11 pr-10 py-6 rounded-2xl bg-card border-border focus:ring-2 focus:ring-accent/20"
+                  className="pl-11 pr-10 py-6 rounded-2xl bg-card border-border focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200 hover:border-accent/50"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors duration-200"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -111,8 +114,8 @@ export function MenuSection() {
                 <Button
                   variant={!activeCategory ? "default" : "outline"}
                   onClick={() => setActiveCategory(null)}
-                  className={`rounded-xl whitespace-nowrap ${
-                    !activeCategory ? 'bg-primary text-primary-foreground' : ''
+                  className={`rounded-xl whitespace-nowrap transition-all duration-200 ${
+                    !activeCategory ? 'bg-primary text-primary-foreground shadow-md hover:shadow-lg' : 'hover:border-primary/50'
                   }`}
                 >
                   Semua
@@ -122,8 +125,8 @@ export function MenuSection() {
                     key={cat.id}
                     variant={activeCategory === cat.id ? "default" : "outline"}
                     onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
-                    className={`rounded-xl whitespace-nowrap ${
-                      activeCategory === cat.id ? 'bg-primary text-primary-foreground' : ''
+                    className={`rounded-xl whitespace-nowrap transition-all duration-200 ${
+                      activeCategory === cat.id ? 'bg-primary text-primary-foreground shadow-md hover:shadow-lg' : 'hover:border-primary/50'
                     }`}
                   >
                     {cat.name}
@@ -141,12 +144,14 @@ export function MenuSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: catIndex * 0.1 }}
+                  className="relative"
                 >
-                  <div className="mb-6">
-                    <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2">
+                  <div className="mb-8">
+                    <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2 inline-block relative">
                       {category.name}
+                      <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-accent to-tropical-orange-light rounded-full"></span>
                     </h3>
-                    <p className="text-muted-foreground">{category.description}</p>
+                    <p className="text-muted-foreground mt-3">{category.description}</p>
                   </div>
 
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

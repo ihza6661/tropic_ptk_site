@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { MapPin, Clock, Check } from 'lucide-react';
@@ -8,6 +8,7 @@ import 'leaflet/dist/leaflet.css';
 
 // Fix Leaflet icon paths for production builds
 // Since we use custom SVG icons, we don't need the default marker images
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: '',
@@ -17,7 +18,8 @@ L.Icon.Default.mergeOptions({
 
 // Custom emerald green marker icon as SVG
 const createEmeraldIcon = (isSelected: boolean = false) => {
-  const color = isSelected ? '#F97316' : '#064E3B'; // Tropical orange for selected, emerald for others
+  // Use HSL values matching our design system
+  const color = isSelected ? 'hsl(25, 95%, 53%)' : 'hsl(160, 89%, 16%)'; // Tropical orange for selected, emerald for others
   const size = isSelected ? 44 : 36;
   
   const svgIcon = `
@@ -105,7 +107,7 @@ export function BranchMap({ branches, focusedBranch, onMarkerClick }: BranchMapP
                     <MapPin className="w-3.5 h-3.5" />
                     <span>{branch.address}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-3">
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-4">
                     <Clock className="w-3.5 h-3.5" />
                     <span>{branch.hours.open} - {branch.hours.close}</span>
                     <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${

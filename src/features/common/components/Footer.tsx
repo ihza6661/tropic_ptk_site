@@ -1,10 +1,32 @@
+import { m } from 'framer-motion';
 import { Coffee, Instagram, Facebook, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="bg-card border-t border-border py-12">
-      <div className="container mx-auto px-6">
+    <footer className="relative bg-card border-t border-border py-12 overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 botanical-pattern opacity-5 pointer-events-none" />
+      
+      {/* Floating Decorative Blobs */}
+      <m.div 
+        className="absolute top-10 right-20 w-32 h-32 rounded-full bg-accent/10 blur-3xl pointer-events-none"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2]
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <m.div 
+        className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-primary/10 blur-3xl pointer-events-none"
+        animate={{ 
+          scale: [1, 1.3, 1],
+          opacity: [0.15, 0.25, 0.15]
+        }}
+        transition={{ duration: 10, repeat: Infinity, delay: 2 }}
+      />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">

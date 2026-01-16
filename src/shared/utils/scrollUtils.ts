@@ -125,7 +125,7 @@ export async function scrollToSectionWithTrigger(
   triggerWrapperId?: string
 ): Promise<boolean> {
   // First check if element already exists (section already loaded)
-  let element = document.getElementById(id);
+  const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
     return true;
